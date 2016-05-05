@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="125.0" prefHeight="420.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.CustomerListController">
+	<children>
+		<VBox alignment="CENTER" prefHeight="316.0" prefWidth="361.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+			<children>
+				<Label text="Customer List">
+					<font>
+						<Font size="18.0" />
+					</font>
+				</Label>
+				<TableView fx:id="tableView" prefHeight="220.0" prefWidth="500.0">
+					<columns>
+						<TableColumn id="firstName" text="First Name">
+								<cellValueFactory><PropertyValueFactory property="firstName" />
+								</cellValueFactory>
+						</TableColumn>
+						<TableColumn id="lastName" text="Last Name">
+							<cellValueFactory><PropertyValueFactory property="lastName" />
+							</cellValueFactory>
+						</TableColumn>
+						<TableColumn id="phoneNumber" prefWidth="135" text="Phone Number">
+							<cellValueFactory><PropertyValueFactory property="phoneNumber" />
+							</cellValueFactory>
+						</TableColumn>
+						<TableColumn id="customerAddress" prefWidth="165.0" text="Address">
+							<cellValueFactory><PropertyValueFactory property="customerAddress" />
+							</cellValueFactory>
+						</TableColumn>
+					</columns>
+
+				</TableView>
+				<HBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="294.0" spacing="20.0">
+					<children>
+						<Button mnemonicParsing="false" onAction="#addCustomer" text="Add" />
+						<Button mnemonicParsing="false" onAction="#editCustomer" text="Edit" />
+						<Button mnemonicParsing="false" onAction="#deleteCustomer" text="Delete" />
+						<Button mnemonicParsing="false" onAction="#invoiceCustomer" text="Invoice" />
+					</children>
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+				</HBox>
+			</children>
+			<padding>
+				<Insets />
+			</padding>
+		</VBox>
+	</children>
+</AnchorPane>

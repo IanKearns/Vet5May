@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="125.0" prefHeight="420.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.65"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.CustomerInvoiceController">
+	<children>
+		<VBox alignment="CENTER" prefHeight="316.0" prefWidth="361.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+			<children>
+				<Label fx:id="customerName"  text="">
+					<font>
+						<Font size="18.0" />
+					</font>
+				</Label>
+				<TableView fx:id="tableView" prefHeight="220.0" prefWidth="500.0">
+					<columns>
+						<TableColumn id="petName" prefWidth="75.0" text="Pet Name">
+								<cellValueFactory><PropertyValueFactory property="petName" />
+								</cellValueFactory>
+						</TableColumn>
+						<TableColumn id="typeOfAnimal" prefWidth="95.0" text="Type Of Animal">
+							<cellValueFactory><PropertyValueFactory property="typeOfAnimal" />
+							</cellValueFactory>
+						</TableColumn>
+						<TableColumn id="type" prefWidth="80.0" text="Procedure">
+								<cellValueFactory>
+									<PropertyValueFactory property="type" />
+								</cellValueFactory>
+						</TableColumn>
+						<TableColumn id="price" prefWidth="50.0" text="Cost">
+							<cellValueFactory>
+								<PropertyValueFactory property="price" />
+							</cellValueFactory>
+						</TableColumn>
+
+                  	<TableColumn id="paid" prefWidth="50.0" text="Paid" >
+                  			<cellValueFactory>
+								<PropertyValueFactory property="paid" />
+							</cellValueFactory>
+						</TableColumn>
+						<TableColumn id="notes" prefWidth="50.0" text="Notes" >
+                  <cellValueFactory>
+								<PropertyValueFactory property="notes" />
+							</cellValueFactory>
+						</TableColumn>
+					</columns>
+
+				</TableView>
+				<Label fx:id="invoiceTotal"  text="">
+					<font>
+						<Font size="18.0" />
+					</font>
+				</Label>
+				<HBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="294.0" spacing="20.0">
+					<children>
+						<Button mnemonicParsing="false" onAction="#screenBack" text="Back" />
+
+					</children>
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+				</HBox>
+			</children>
+			<padding>
+				<Insets />
+			</padding>
+		</VBox>
+	</children>
+</AnchorPane>
